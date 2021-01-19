@@ -21,6 +21,7 @@
 
   <section class="main">
     <div class="container">
+      <h3 class="main__heading">General info about me:</h3>
       <ol class="main__list">
         <li class="main__list-item">
           My fullname is Nikita Kubarko
@@ -42,10 +43,15 @@
         <li class="main__list-item">
           About me:
           <ul class="main__list-sublist">
-            <picture>
-              <source srcset="images/myphoto.webp" type="image/webp">
-              <img class="main__list-image" src="images/myphoto.jpg" alt="My photo">
-            </picture>
+            <li class="list__item-img-wrapper">
+              <figure>
+                <picture>
+                  <source srcset="images/myphoto.webp" type="image/webp">
+                  <img class="main__list-image" src="images/myphoto.jpg" alt="My photo">
+                </picture>
+                <figcaption>Studio Photo</figcaption>
+              </figure>
+            </li>
             <li class="main__sublist-item">
               <p class="main__list-paragraph">
                 I love coding. Many people think that programing is a quite hard activity, but i realized that when you
@@ -182,7 +188,7 @@ protected override bool ProcessDialogKey(Keys keyData)
   </section>
 
   <footer class="footer">
-    <span class="footer__text">&copy; Nikita Kubarko 2021</span>
+    <span class="footer__text"><mark>&copy; Nikita Kubarko 2021</mark></span>
   </footer>
 </body>
 
