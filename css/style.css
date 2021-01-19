@@ -1,0 +1,142 @@
+html{
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: url(../images/background.jpg);
+  background-size: 600px;
+  background-position: 0 0;
+  color: #ccc;
+  animation-name: bg-anim;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes bg-anim{
+  0%{background-position: 0 0;}
+  50%{background-position: 100px 0;}
+  100%{background-position: 0 0;}
+}
+a{
+  text-decoration: none;
+  color: #ceaede;
+}
+a:hover{
+  text-decoration: underline;
+}
+ul, ol{
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6,
+p{
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+}
+.container{
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: rgba(0,0,0,0.6);
+}
+.header__main-text{
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+}
+.main__list-image{
+  display: block;
+  float: right;
+  height: 270px;
+  border: 2px solid #ccc;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+ul li{
+  margin-left: 20px;
+}
+ol{
+  padding-left: 20px;
+}
+pre{
+  overflow-x: auto;
+}
+.header{
+  background-color: rgba(0,0,0,0.8);
+}
+.header__wrapper{
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.main__list-item{
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.main__list-sublist{
+  font-size: 16px;
+  font-weight: 400;
+}
+.main__sublist-item{
+  margin-top: 10px;
+}
+.footer{
+  padding: 20px 0;
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  margin-top: 40px;
+}
+.footer__text{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media(max-width: 1000px){
+  .main__list-item{
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+@media(max-width: 768px){
+  .main__list-item{
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .main__list-sublist{
+    font-size: 14px;
+  }
+  .header__main-text{
+    font-size: 18px;
+  }
+  .main__list-image{
+    float: unset;
+    margin: 20px 0 20px 0;
+  }
+  .container{
+    padding: 0 10px;
+  }
+  body{
+    background-size: 400px;
+  }
+}
+@media(max-width: 480px){
+  .main__list-image{
+    width: 100%;
+    height: unset;
+  }
+  pre{
+    font-size: 12px;
+  }
+}

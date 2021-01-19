@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikita Kubarko CV</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <h2 class="header__main-text">Hello, I'm Nikita and this is my CV in HTML format, make yourself at home...</h2>
+      </div>
+    </div>
+  </header>
+
+  <section class="main">
+    <div class="container">
+      <ol class="main__list">
+        <li class="main__list-item">
+          My fullname is Nikita Kubarko
+        </li>
+        <li class="main__list-item">
+          Contacts below:
+          <ul class="main__list-sublist">
+            <li class="main__sublist-item">
+              Phone: <a href="tel:375298256042" class="main__list-link">+375 (29) 825-60-42</a>
+            </li>
+            <li class="main__sublist-item">
+              Email:
+              <a href="mailto:alwayswannaflyinbluesky@gmail.com" class="main__list-link">
+                alwayswannaflyinbluesky@gmail.com
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="main__list-item">
+          About me:
+          <ul class="main__list-sublist">
+            <picture>
+              <source srcset="images/myphoto.webp" type="image/webp">
+              <img class="main__list-image" src="images/myphoto.jpg" alt="My photo">
+            </picture>
+            <li class="main__sublist-item">
+              <p class="main__list-paragraph">
+                I love coding. Many people think that programing is a quite hard activity, but i realized that when you
+                study piece by
+                piece it becomes easy to understand almost everything.
+              </p>
+            </li>
+            <li class="main__sublist-item">
+              <p class="main__list-paragraph">
+                My goal is to become a front-end developer and get a job on this direction.
+              </p>
+            </li>
+            <li class="main__sublist-item">
+              <p class="main__list-paragraph">
+                Every day I try to do something that could make me closer to my purpose, it can be completing labs (C#,
+                markup-languages) for the future, working on course-project or updating my portfolio connected with
+                web-sites
+                development.
+              </p>
+            </li>
+            <li class="main__sublist-item">
+              <p class="main__list-paragraph">
+                I can say with confidence that I’am hardworking and self-contained person, sometimes I need a bit of
+                helpful
+                information, but in general I try to solve problems by my own. I always ready to learn something new.
+                Moreover I’m
+                communicative person, it is easy for me to talk with new people, discuss different issues and ways to
+                solve them,
+                I am
+                able to admit my mistakes because I know that mistakes are the only way to grow and upgrade yourself.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="main__list-item">
+          For now I know and use following technologies and approaches:
+          <ul class="main__list-sublist">
+            <li class="main__sublist-item">
+              Perfect knowledge of HTML and CSS
+            </li>
+            <li class="main__sublist-item">
+              Middle-basic JavaScript (event-loop, promises, ajax)
+            </li>
+            <li class="main__sublist-item">
+              Using of npm and gulp to automate the development workflow
+            </li>
+            <li class="main__sublist-item">
+              SASS (CSS-preprocessor)
+            </li>
+            <li class="main__sublist-item">
+              A good knowledge in algorithmization and OOP (C++ and C# labs on github)
+            </li>
+            <li class="main__sublist-item">
+              Using BEM methodology in all projects
+            </li>
+            <li class="main__sublist-item">
+              A good level of English language, can freely speak, write, read
+            </li>
+            <li class="main__sublist-item">
+              Understands of client-server architecture, TCP/IP protocol, ip-addressation, HTTP protocol.
+            </li>
+            <li class="main__sublist-item">
+              Have a <a class="main__list-link" href="https://github.com/kubarenatioN/kubarenatioN.github.io"
+                target="_blank">portfolio on GitHub Pages</a>
+            </li>
+          </ul>
+        </li>
+        <li class="main__list-item">
+          Code examples:
+          <ul class="main__list-sublist">
+            <li class="main__sublist-item">
+              Reading XML files, using httprequest
+              <pre>
+                <code>
+//Загружаем данные о товарах из файла dataFile.xml в секцию sectionId
+function loadGeneralGoods(dataFile, sectionId) {
+  //Возвращаем промис, т.к. используем конструкцию Promise.all().then()
+  return new Promise(resolve => {
+    //Объект запроса
+    let xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        generalGoodsXmlDataParse(this, sectionId, resolve)
+      }
+    };
+    xhttp.open('GET', 'xml/' + dataFile + '.xml', true)//Формируем характер запроса
+    xhttp.send()//Отправляем запрос
+  })
+}
+                </code>
+              </pre>
+            </li>
+            <li class="main__sublist-item">
+              overriding the default Enter key behavior in winforms calculator application (lab №1 C#)
+              <pre>
+                <code>
+protected override bool ProcessDialogKey(Keys keyData)
+{
+  if (keyData == Keys.Enter)
+  {
+    string s = label1.Text;//by default s contains equasion
+    if (label1.Text.StartsWith("-"))
+    {
+      s = label1.Text.Remove(0, 1);//if equasion starts with minus -> delete it, and check for operation without it
+    }
+    if (!(s.EndsWith("+") || s.EndsWith("-") || s.EndsWith("*") || s.EndsWith("/") || s.EndsWith("%")))
+    {
+      if (s.Contains('+'))
+      {
+        Add();
+      }
+      ...
+      label1.Text = currentResult.ToString();
+      isEnterPressed = true;
+    }
+    return true;
+  }
+}
+                </code>
+              </pre>
+            </li>
+          </ul>
+        </li>
+        <li class="main__list-item">
+          I’m a 2nd-course student of the Belorussian State Technological University (BSTU), on the Faculty of
+          Infomation
+          Technologies (FIT)
+        </li>
+        <li class="main__list-item">
+          In my opinion I’m good in English, have a 10 mark for English exam in 3 semester.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="footer__text">&copy; Nikita Kubarko 2021</span>
+  </footer>
+</body>
+
+</html>
